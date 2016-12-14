@@ -1,0 +1,19 @@
+<h1> This is our {{$ctrl.text}} app </h1>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in $ctrl.users">
+      <td>{{user.name}}</td>
+      <td>{{user.surname}}</td>
+    </tr>
+  </tbody>
+
+</table>
