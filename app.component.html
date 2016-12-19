@@ -1,5 +1,11 @@
 <h1> This is our {{$ctrl.text}} app </h1>
 
+<button ng-click="$ctrl.limpiarSeleccionado()"> Borrar seleccionado</button>
+
 <user-list users="$ctrl.users" set-selected-user="$ctrl.setSelectedUser(user)"></user-list>
-<br>
-<user-detail user="$ctrl.selectedUser"> </user-detail>
+
+
+<!--<h3>{{$ctrl.selectedUser.name}}</h3>-->
+
+
+<user-detail user="$ctrl.selectedUser.name"> </user-detail>

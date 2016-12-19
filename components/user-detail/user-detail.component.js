@@ -12,20 +12,23 @@
       templateUrl: 'components/user-detail/user-detail.component.html',
       controller: UserDetailController,
       bindings: {
-        user: '<',
-
+        user: '<'
       },
     });
 
   UserDetailController.inject = [];
   function UserDetailController() {
     var ctrl = this;
-
-
     ////////////////
 
     ctrl.onInit = function () { };
-    ctrl.onChanges = function (changesObj) { };
-    ctrl.onDestory = function () { };
+
+
+
+    ctrl.onChanges = function (changesObj) {
+      console.info(changesObj);
+    };
+
+
   }
 })();

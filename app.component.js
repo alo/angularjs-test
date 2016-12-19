@@ -14,8 +14,9 @@
     $ctrl.text = 'ANGULAR';
 
     $ctrl.selectedUser = {};
-
     $ctrl.setSelectedUser = setSelectedUser;
+    $ctrl.limpiarSeleccionado = limpiarSeleccionado;
+
 
     AppService.getUsers().then(
       function (res) {
@@ -30,6 +31,10 @@
       console.log('user', user);
 
       $ctrl.selectedUser = user;
+    }
+
+    function limpiarSeleccionado() {
+      $ctrl.selectedUser = {};
     }
 
 

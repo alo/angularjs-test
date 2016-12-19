@@ -1,0 +1,7 @@
+user-list > table > tbody > tr{
+ cursor: pointer;
+}
+
+user-list > table > tbody > tr :hover{
+ background-color: #f6f6f6;
+}
