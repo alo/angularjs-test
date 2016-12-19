@@ -1,17 +1,5 @@
 <h1> This is our {{$ctrl.text}} app </h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellidos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="user in $ctrl.users">
-      <td>{{user.name}}</td>
-      <td>{{user.surname}}</td>
-    </tr>
-  </tbody>
-
-</table>
+<user-list users="$ctrl.users" set-selected-user="$ctrl.setSelectedUser(user)"></user-list>
+<br>
+<user-detail user="$ctrl.selectedUser"> </user-detail>

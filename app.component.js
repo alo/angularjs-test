@@ -13,6 +13,10 @@
     var $ctrl = this;
     $ctrl.text = 'ANGULAR';
 
+    $ctrl.selectedUser = {};
+
+    $ctrl.setSelectedUser = setSelectedUser;
+
     AppService.getUsers().then(
       function (res) {
         $ctrl.users = res.data;
@@ -21,6 +25,16 @@
         console.error('error al traer los usuarios', error);
       }
     );
+
+    function setSelectedUser(user) {
+      console.log('user', user);
+
+      $ctrl.selectedUser = user;
+    }
+
+
+
+
 
   }
 
