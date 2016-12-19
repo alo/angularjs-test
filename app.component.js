@@ -8,20 +8,20 @@
       controller: AppComponentController
     });
 
-  AppComponentController.$inject = ['$http'];
-  function AppComponentController($http) {
+  AppComponentController.$inject = ['AppService'];
+  function AppComponentController(AppService) {
     var $ctrl = this;
     $ctrl.text = 'ANGULAR';
 
-    $http.get('users.json').then(
-      function onSuccess(res) {
-        console.log('usuarios cargados', res);
+    AppService.getUsers().then(
+      function (res) {
         $ctrl.users = res.data;
       },
       function onError(error) {
         console.error('error al traer los usuarios', error);
       }
     );
+
   }
 
 })();
